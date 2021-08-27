@@ -283,7 +283,7 @@ header .container nav .form::before {
 
 .landing {
     min-height: 100vh;
-    background-image: url(../images/landing.jpg);
+    background-image: url(../images/landing.WebP);
     background-size: cover;
     background-color: rgb(10, 10, 32);
     position: relative;
@@ -331,18 +331,6 @@ header .container nav .form::before {
     margin-bottom: 20px;
     animation-name: trans;
     animation-duration: 1.2s;
-}
-
-@keyframes trans {
-    0% {
-        transform: translateX(500px);
-    }
-    40% {
-        transform: translateX(-30px);
-    }
-    100% {
-        transform: translateX(0px);
-    }
 }
 
 .landing .text .content p {
@@ -449,7 +437,7 @@ header .container nav .form::before {
     padding-bottom: var(--sections-padding);
     height: 600px;
     position: relative;
-    background-image: url(../images/design-image.png);
+    background-image: url(../images/design-image.WebP);
     background-size: cover;
     display: flex;
     align-items: center;
@@ -619,39 +607,43 @@ header .container nav .form::before {
 .Portfolio .more {
     background-color: var(--main-color);
     color: white;
-    padding: 15px 14.2px;
     display: block;
     width: fit-content;
     margin: 30px auto;
     text-decoration: none;
     text-transform: uppercase;
     border-radius: 20px;
-    text-align: start;
     transition: var(--main-transision);
     position: relative;
     overflow: hidden;
     width: 100px;
-}
-
-.Portfolio .more:hover {
-    color: var(--main-color);
-    background-color: white;
-    border: 1px solid var(--main-color);
-}
-
-.Portfolio .more:hover.more::before {
-    left: 10px;
-    margin-right: 10px;
+    text-align: center;
+    padding: 15px 5px;
 }
 
 .Portfolio .more::before {
     content: "\f101";
-    font-family: "font awesome 5 free";
+    font-family: "Font Awesome 5 Free";
     font-weight: 900;
-    color: var(--main-color);
-    position: relative;
-    left: -100px;
+    position: absolute;
+    font-size: 25px;
+    top: 24%;
+    left: 45%;
+    transform: translateX(-400%);
     transition: var(--main-transision);
+}
+
+.Portfolio .more span {
+    display: block;
+    transition: var(--main-transision);
+}
+
+.Portfolio .more:hover::before {
+    transform: translateX(0);
+}
+
+.Portfolio .more:hover span {
+    transform: translateX(400%);
 }
 
 /* end Portfolio */
@@ -745,7 +737,7 @@ header .container nav .form::before {
     padding-top: var(--sections-padding);
     padding-bottom: var(--sections-padding);
     text-align: center;
-    background-image: url(../images/stats.png);
+    background-image: url(../images/stats.WebP);
     background-size: cover;
     position: relative;
     background-attachment: fixed;
@@ -957,7 +949,7 @@ header .container nav .form::before {
 .quote {
     padding-top: var(--sections-padding);
     padding-bottom: var(--sections-padding);
-    background-image: url(../images/quote.jpg);
+    background-image: url(../images/quote.WebP);
     background-size: cover;
     position: relative;
     text-align: center;
@@ -1037,7 +1029,7 @@ q::before, q::after {
     border-bottom: 1px sollid var(--main-color);
 }
 
-.pricing .plans .plan .head h3 {
+.pricing .plans .plan .head h4 {
     font-weight: normal;
     margin-bottom: 20px;
     text-transform: uppercase;
@@ -1151,7 +1143,7 @@ q::before, q::after {
 .subscribe {
     padding-top: var(--sections-padding);
     padding-bottom: var(--sections-padding);
-    background-image: url(../images/subscribe.jpg);
+    background-image: url(../images/subscribe.WebP);
     background-size: cover;
     position: relative;
     color: white;
@@ -1363,7 +1355,7 @@ q::before, q::after {
 footer {
     padding-top: calc(var(--sections-padding) / 2);
     padding-bottom: calc(var(--sections-padding) / 2);
-    background-image: url(../images/subscribe.jpg);
+    background-image: url(../images/subscribe.WebP);
     background-size: cover;
     background-attachment: fixed;
     position: relative;
@@ -1446,3 +1438,17 @@ footer .copyright span {
 }
 
 /* end footer */
+
+/* start animation */
+
+@keyframes trans {
+    0% {
+        transform: translateX(500px);
+    }
+    40% {
+        transform: translateX(-30px);
+    }
+    100% {
+        transform: translateX(0px);
+    }
+}
